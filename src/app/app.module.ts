@@ -9,7 +9,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { CheckOutComponent } from './components/check-out/check-out.component';
 const routes: Routes =[
-  {path : 'checkout',component: CheckOutComponent},
+{path : 'checkout',component: CheckOutComponent},
 {path : 'cart',component: ShoppingCartComponent},
 {path : 'products/id',component: ProductDetailsComponent},
 {path : 'products',component: ProductListComponent},
