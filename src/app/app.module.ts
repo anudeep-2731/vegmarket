@@ -8,6 +8,10 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { CheckOutComponent } from './components/check-out/check-out.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
+
+import {HttpClientModule} from '@angular/common/http';
+import { ProductService } from './services/product.service';
 const routes: Routes =[
 {path : 'checkout',component: CheckOutComponent},
 {path : 'cart',component: ShoppingCartComponent},
@@ -23,13 +27,15 @@ const routes: Routes =[
     ProductListComponent,
     ProductDetailsComponent,
     ShoppingCartComponent,
-    CheckOutComponent
+    CheckOutComponent,
+    LoginPageComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
