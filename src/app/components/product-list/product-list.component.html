@@ -19,25 +19,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-5">
-                <div class="hero__categories">
-                    <div class="hero__categories__all">
-                        <i class="fa fa-bars"></i>
-                        <span>All departments</span>
-                    </div>
-                    <ul>
-                        <li><a href="#">Fresh Meat</a></li>
-                        <li><a href="#">Vegetables</a></li>
-                        <li><a href="#">Fruit & Nut Gifts</a></li>
-                        <li><a href="#">Fresh Berries</a></li>
-                        <li><a href="#">Ocean Foods</a></li>
-                        <li><a href="#">Butter & Eggs</a></li>
-                        <li><a href="#">Fastfood</a></li>
-                        <li><a href="#">Fresh Onion</a></li>
-                        <li><a href="#">Papayaya & Crisps</a></li>
-                        <li><a href="#">Oatmeal</a></li>
-                        <li><a href="#">Fresh Bananas</a></li>
-                    </ul>
-                </div>
+                <app-product-category-menu></app-product-category-menu>
                 <!-- <div class="sidebar">
                     <div class="sidebar__item">
                         <h4>Department</h4>
@@ -347,8 +329,8 @@
                     </div>
                 </div> -->
                 <div class="row">
-                <div *ngFor="let p of products" class="col-6 col-lg-4 col-md-4 col-sm-4">
-                      <div class="product__item">
+                    <div *ngFor="let p of products" class="col-6 col-lg-4 col-md-4 col-sm-4">
+                        <a href="#"><div class="product__item">
                           <div  class="product__item__pic set-bg">
                               <img src="{{p.imageUrl}}">
                               <ul class="product__item__pic__hover">
@@ -358,10 +340,10 @@
                               </ul>
                           </div>
                           <div class="product__item__text">
-                              <h6><a href="#">{{p.name}}</a></h6>
-                              <h5>{{p.unitPrice}}</h5>
+                              <h4>{{p.name}}</h4>
+                              <h5>{{p.unitPrice}}.00</h5>
                           </div>
-                      </div>
+                      </div></a>
                   </div>
                  </div>
                 <div class="product__pagination">

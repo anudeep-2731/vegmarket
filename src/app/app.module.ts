@@ -12,7 +12,10 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 
 import {HttpClientModule} from '@angular/common/http';
 import { ProductService } from './services/product.service';
+import { ProductCategoryMenuComponent } from './components/product-category-menu/product-category-menu.component';
 const routes: Routes =[
+{path : 'category/:id',component: ProductListComponent},
+{path : 'category',component: ProductListComponent},
 {path : 'checkout',component: CheckOutComponent},
 {path : 'cart',component: ShoppingCartComponent},
 {path : 'products/id',component: ProductDetailsComponent},
@@ -28,7 +31,8 @@ const routes: Routes =[
     ProductDetailsComponent,
     ShoppingCartComponent,
     CheckOutComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    ProductCategoryMenuComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
