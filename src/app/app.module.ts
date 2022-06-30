@@ -13,12 +13,14 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import {HttpClientModule} from '@angular/common/http';
 import { ProductService } from './services/product.service';
 import { ProductCategoryMenuComponent } from './components/product-category-menu/product-category-menu.component';
+import { SearchComponent } from './components/search/search.component';
 const routes: Routes =[
+  {path : 'search/:keyword',component: ProductListComponent},
 {path : 'category/:id',component: ProductListComponent},
 {path : 'category',component: ProductListComponent},
 {path : 'checkout',component: CheckOutComponent},
 {path : 'cart',component: ShoppingCartComponent},
-{path : 'products/id',component: ProductDetailsComponent},
+{path : 'products/:id',component: ProductDetailsComponent},
 {path : 'products',component: ProductListComponent},
 {path : '', redirectTo: '/products' , pathMatch: 'full'},
 {path : '**', redirectTo: '/products' , pathMatch: 'full'}
@@ -32,7 +34,8 @@ const routes: Routes =[
     ShoppingCartComponent,
     CheckOutComponent,
     LoginPageComponent,
-    ProductCategoryMenuComponent
+    ProductCategoryMenuComponent,
+    SearchComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
